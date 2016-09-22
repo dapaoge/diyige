@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>天气预报</title>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            /*设置背景渐变色，根据渐变色绘制一张图片作为背景图片*/
+            /*linear-gradient()  线性   三个值  方向  两个颜色*/
+            background-image: linear-gradient(to bottom, rgb(10, 100, 200), rgb(200, 200, 200));
+            text-align: center;
+            color: white;
+            /*开启弹性布局*/
+            display: flex;
+            /*设置按照什么方向进行弹性布局*/
+            flex-direction: column;
+            /*留出body标签之中的空隙*/
+            justify-content: space-between;
+        }
+        
+        header {
+            color: white;
+            margin: 30px;
+            font-size: 24px;
+        }
+        
+        main .ww {
+            background-image: url(days/cloudy1.png);
+            height: 128px;
+            background-position: center, center;
+            background-repeat: no-repeat;
+            margin: 50px;
+        }
+        
+        .uu {
+            font-size: 24px;
+        }
+        
+        section {
+            width: 33.33%;
+            float: left;
+            border-right: solid 1px rgb(100, 100, 100);
+            /*将线的像素放到33.33%之内*/
+            box-sizing: border-box;
+            margin: 150px auto;
+        }
+        section:nth-child(3){
+            border: none;
+        }
+        section .ww{
+            background-image: url(days/leizhenyu.png);
+            height: 64px;
+            /*刚好将图片包含在64像素之内*/
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center,center;
+        }
+        .pp{
+            /*清除左边的浮动效果   左边不能出现浮动的效果*/
+            clear:left;
+        }
+    </style>
+</head>
+
+<body>
+    <header>郑州市</header>
+    <main>
+        <div class="ww"></div>
+        <div class="uu">
+            <span>34 ~ 23</span>
+            <sup>℃</sup></div>
+        <div>晴</div>
+        <div>微风</div>
+        <div>实时温度：25℃，空气指数 69 良</div>
+    </main>
+    <footer>
+        <section>
+            <div>周三</div>
+            <div class="ww"></div>
+            <div>36 ~ 25℃</div>
+            <div>雷阵雨</div>
+            <div>微风</div>
+        </section>
+        <section>
+            <div>周四</div>
+            <div class="ww"></div>
+            <div>35 ~ 25℃</div>
+            <div>雨夹雪</div>
+            <div>大风</div>
+        </section>
+        <section>
+            <div>周五</div>
+            <div class="ww"></div>
+            <div>15~30℃</div>
+            <div>晴</div>
+            <div>狂风</div>
+        </section>
+        <div class="pp"></div>
+    </footer>
+</body>
+
+</html>
